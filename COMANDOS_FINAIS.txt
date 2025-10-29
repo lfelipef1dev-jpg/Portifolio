@@ -1,0 +1,13 @@
+🎯 COMANDOS PARA EXECUTAR AGORA:
+
+1. Substitua "SEU-USUARIO" pelo seu usuário do GitHub na URL abaixo:
+
+2. Execute no PowerShell:
+   cd C:\Users\lfeli\Desktop\Portifolio
+   $env:Path += ";C:\Program Files\Git\cmd"
+   
+   git remote add origin https://github.com/SEU-USUARIO/Portifolio.git
+   git push -u origin main
+
+OU me envie seu usuário do GitHub e eu executo tudo automaticamente! 🚀
+
