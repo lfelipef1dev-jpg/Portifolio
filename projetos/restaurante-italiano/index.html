@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante Italiano - Autenticidade e Sabor | Reservas Online</title>
+    <meta name="description" content="Restaurante italiano autêntico com cardápio digital, reservas online e os melhores sabores da Itália.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ristoranteitaliano.com.br/">
+    <meta property="og:title" content="Ristorante Italiano - Autenticidade e Sabor">
+    <meta property="og:description" content="Restaurante italiano autêntico com cardápio digital e reservas online.">
+    <meta property="og:image" content="https://ristoranteitaliano.com.br/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ristoranteitaliano.com.br/">
+    <meta property="twitter:title" content="Ristorante Italiano">
+    <meta property="twitter:description" content="Autenticidade italiana em cada prato.">
+    <meta property="twitter:image" content="https://ristoranteitaliano.com.br/assets/images/og-image.jpg">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Ristorante Italiano",
+        "description": "Restaurante italiano autêntico",
+        "url": "https://ristoranteitaliano.com.br",
+        "servesCuisine": "Italian",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        }
+    }
+    </script>
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Ristorante Italiano</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Início</a>
+                <a href="#menu">Cardápio</a>
+                <a href="#about">Sobre</a>
+                <a href="#reservation">Reservas</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <a href="#reservation" class="btn btn-primary">Reservar Mesa</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Sabor Autêntico da <span>Itália</span></h1>
+            <p>Tradição italiana em cada prato</p>
+            <a href="#menu" class="btn btn-primary btn-large">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">Todos</button>
+                <button class="menu-tab" data-category="appetizer">Entradas</button>
+                <button class="menu-tab" data-category="main">Pratos Principais</button>
+                <button class="menu-tab" data-category="dessert">Sobremesas</button>
+                <button class="menu-tab" data-category="drink">Bebidas</button>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item" data-category="appetizer">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bruschetta" loading="lazy">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Bruschetta Tradizionale</h3>
+                        <p>Pão italiano torrado com tomate, manjericão e alho</p>
+                        <div class="menu-item-price">R$ 28,90</div>
+                        <button class="btn-add">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pizza" loading="lazy">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Pizza Margherita</h3>
+                        <p>Massa artesanal, molho de tomate, mozzarella e manjericão</p>
+                        <div class="menu-item-price">R$ 42,90</div>
+                        <button class="btn-add">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="main">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pasta" loading="lazy">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>Spaghetti com bacon, ovos e queijo parmesão</p>
+                        <div class="menu-item-price">R$ 48,90</div>
+                        <button class="btn-add">Adicionar</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item" data-category="dessert">
+                    <div class="menu-item-image">
+                        <img src="https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tiramisu" loading="lazy">
+                    </div>
+                    <div class="menu-item-info">
+                        <h3>Tiramisu</h3>
+                        <p>Sobremesa italiana clássica com café e mascarpone</p>
+                        <div class="menu-item-price">R$ 22,90</div>
+                        <button class="btn-add">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <h2 class="section-title">Reserve sua Mesa</h2>
+            <form class="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telefone</label>
+                        <input type="tel" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Data</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Horário</label>
+                        <select required>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+                            <option>21:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Pessoas</label>
+                        <select required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Confirmar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section" style="background: #f5f5f5; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">O que nossos clientes dizem</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Avaliações reais de quem já jantou conosco</p>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Melhor restaurante italiano de São Paulo! A comida é autêntica, o ambiente é acolhedor e o atendimento impecável. Voltarei sempre!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Ana" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Ana Borges</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Cliente Fiel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Celebrei meu aniversário aqui e foi perfeito! O Tiramisu é divino e a equipe toda é muito atenciosa. Recomendo de olhos fechados!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="João" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">João Santos</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Cliente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Pizza Margherita autêntica! Como se estivesse na Itália. Ambiente romântico perfeito para um jantar especial. Já é nosso restaurante favorito!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Carla" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Carla e Marco</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Casal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Perguntas Frequentes</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Tire suas dúvidas sobre reservas e nosso restaurante</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>É necessário fazer reserva?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Recomendamos fazer reserva, especialmente nos finais de semana e feriados. Você pode reservar pelo site, telefone ou WhatsApp. Reservas são gratuitas e podem ser canceladas até 2 horas antes.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Vocês fazem entregas/delivery?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Oferecemos delivery através dos principais aplicativos (iFood, Uber Eats) e também pelo nosso WhatsApp. Frete grátis para pedidos acima de R$ 80.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Qual o horário de funcionamento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Funcionamos de terça a domingo, das 18h às 23h. Fechamos às segundas-feiras. Para eventos especiais e grupos maiores, entre em contato conosco.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Vocês aceitam cartão?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Aceitamos cartões de crédito (Visa, Mastercard, Elo), débito e PIX. Também aceitamos dinheiro.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Ristorante Italiano</span>
+                    </div>
+                    <p>Tradição italiana desde 1985</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horário</h4>
+                    <p>Terça a Domingo<br>18h às 23h</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p>(11) 1234-5678<br>contato@ristorante.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    const isOpen = answer.style.display === 'block';
+                    
+                    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                    document.querySelectorAll('.faq-question i').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

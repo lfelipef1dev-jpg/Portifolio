@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Imagem Open Graph - Felipe Web Solutions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+        }
+        .canvas-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin: 1rem;
+        }
+        .controls {
+            margin: 1rem 0;
+        }
+        label {
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        button {
+            background: #0066CC;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+        button:hover {
+            background: #0052a3;
+        }
+        .download-button {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ Gerador de Imagem Open Graph</h1>
+        <p>Gere a imagem de preview para compartilhamentos em redes sociais (1200x630px).</p>
+        
+        <div class="info">
+            <strong>📋 Instruções:</strong>
+            <ol>
+                <li>Personalize título, subtítulo e cores</li>
+                <li>Clique em "Gerar Imagem"</li>
+                <li>Clique em "Download og-image.jpg"</li>
+                <li>Salve em <code>assets/images/og-image.jpg</code></li>
+            </ol>
+        </div>
+
+        <div class="controls">
+            <div class="grid">
+                <div>
+                    <label>Título (Principal):</label>
+                    <input type="text" id="title" value="Luiz Felipe - Desenvolvedor Web Profissional">
+
+                    <label>Subtítulo (Secundário):</label>
+                    <textarea id="subtitle">Soluções digitais para seu negócio | Sites, E-commerce, Sistemas Personalizados</textarea>
+
+                    <label>Cor de Fundo (Gradiente Início):</label>
+                    <input type="color" id="bg-color-1" value="#0066CC">
+
+                    <label>Cor de Fundo (Gradiente Fim):</label>
+                    <input type="color" id="bg-color-2" value="#004499">
+                </div>
+                <div>
+                    <label>Cor do Título:</label>
+                    <input type="color" id="title-color" value="#FFFFFF">
+
+                    <label>Cor do Subtítulo:</label>
+                    <input type="color" id="subtitle-color" value="#E0E0E0">
+
+                    <label>Tamanho da Fonte do Título:</label>
+                    <input type="range" id="title-size" min="30" max="80" value="56">
+                    <span id="title-size-value">56px</span>
+
+                    <label>Tamanho da Fonte do Subtítulo:</label>
+                    <input type="range" id="subtitle-size" min="20" max="40" value="28">
+                    <span id="subtitle-size-value">28px</span>
+                </div>
+            </div>
+
+            <button onclick="generateImage()">🎨 Gerar Imagem</button>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="og-canvas" width="1200" height="630"></canvas>
+        </div>
+
+        <div class="download-button">
+            <button onclick="downloadImage()">📥 Download og-image.jpg</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('og-canvas');
+        const ctx = canvas.getContext('2d');
+
+        document.getElementById('title-size').addEventListener('input', function(e) {
+            document.getElementById('title-size-value').textContent = e.target.value + 'px';
+        });
+
+        document.getElementById('subtitle-size').addEventListener('input', function(e) {
+            document.getElementById('subtitle-size-value').textContent = e.target.value + 'px';
+        });
+
+        function generateImage() {
+            const width = 1200;
+            const height = 630;
+
+            canvas.width = width;
+            canvas.height = height;
+
+            // Gradiente de fundo
+            const bgColor1 = document.getElementById('bg-color-1').value;
+            const bgColor2 = document.getElementById('bg-color-2').value;
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, bgColor1);
+            gradient.addColorStop(1, bgColor2);
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Padrão decorativo (opcional)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            for (let i = 0; i < 20; i++) {
+                ctx.beginPath();
+                ctx.arc(Math.random() * width, Math.random() * height, 3, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Título
+            const title = document.getElementById('title').value;
+            const titleColor = document.getElementById('title-color').value;
+            const titleSize = parseInt(document.getElementById('title-size').value);
+            
+            ctx.fillStyle = titleColor;
+            ctx.font = `bold ${titleSize}px 'Segoe UI', Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Quebra de linha se necessário
+            const maxWidth = width * 0.8;
+            const lines = wrapText(ctx, title, maxWidth);
+            const lineHeight = titleSize * 1.2;
+            const startY = height * 0.35 - (lines.length - 1) * lineHeight / 2;
+            
+            lines.forEach((line, index) => {
+                ctx.fillText(line, width / 2, startY + index * lineHeight);
+            });
+
+            // Subtítulo
+            const subtitle = document.getElementById('subtitle').value;
+            const subtitleColor = document.getElementById('subtitle-color').value;
+            const subtitleSize = parseInt(document.getElementById('subtitle-size').value);
+            
+            ctx.fillStyle = subtitleColor;
+            ctx.font = `${subtitleSize}px 'Segoe UI', Arial, sans-serif`;
+            
+            const subtitleLines = wrapText(ctx, subtitle, maxWidth);
+            const subtitleLineHeight = subtitleSize * 1.3;
+            const subtitleStartY = height * 0.55;
+            
+            subtitleLines.forEach((line, index) => {
+                ctx.fillText(line, width / 2, subtitleStartY + index * subtitleLineHeight);
+            });
+
+            // Decoração (ícone de código)
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.font = `bold 150px Arial`;
+            ctx.fillText('</>', width * 0.85, height * 0.75);
+        }
+
+        function wrapText(context, text, maxWidth) {
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                const word = words[i];
+                const width = context.measureText(currentLine + ' ' + word).width;
+                if (width < maxWidth) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'og-image.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.92);
+            link.click();
+        }
+
+        // Gerar imagem inicial
+        generateImage();
+    </script>
+</body>
+</html>
+
+

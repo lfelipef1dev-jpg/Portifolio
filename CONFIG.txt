@@ -1,0 +1,65 @@
+=================================================================
+    CONFIGURAÇÃO RÁPIDA - Felipe Web Solutions
+=================================================================
+
+Este arquivo é para você preencher com suas informações reais.
+Depois, substitua nos arquivos conforme indicado.
+
+=================================================================
+
+1. FORMSPREE - ID do Formulário:
+   Formato: xrgklqwe (apenas letras/números, sem espaços)
+   
+   Seu ID: _________________________
+   
+   Onde atualizar: index.html linha 1073
+   Substituir: "seu-form-id-aqui"
+
+=================================================================
+
+2. GOOGLE ANALYTICS - ID de Medição:
+   Formato: G-XXXXXXXXXX (G- seguido de números)
+   
+   Seu ID: _________________________
+   
+   Onde atualizar: index.html linhas 1192 e 1197
+   Substituir: "GA_MEASUREMENT_ID"
+
+=================================================================
+
+3. GITHUB - Seu Usuário:
+   Formato: luizfelipe (apenas letras/números, sem espaços)
+   
+   Seu Usuário: _________________________
+   
+   Onde atualizar: index.html (7 lugares)
+   Linhas: 603, 631, 659, 687, 715, 743, 771
+   Substituir: "seu-usuario"
+
+=================================================================
+
+4. ÍCONES PWA:
+   Arquivos necessários:
+   - assets/images/icon-192x192.png
+   - assets/images/icon-512x512.png
+   
+   Use o arquivo: gerador_icones.html
+   (Abra no navegador e gere os ícones)
+
+=================================================================
+
+5. IMAGEM OPEN GRAPH:
+   Arquivo necessário:
+   - assets/images/og-image.jpg
+   
+   Use o arquivo: gerador_og_image.html
+   (Abra no navegador e gere a imagem)
+
+=================================================================
+
+INSTRUÇÕES COMPLETAS:
+Leia o arquivo: CONFIGURACAO_PASSO_A_PASSO.md
+
+=================================================================
+
+

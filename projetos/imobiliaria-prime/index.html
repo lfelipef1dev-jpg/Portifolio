@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária Prime - Seu Lar dos Sonhos | Venda e Aluguel</title>
+    <meta name="description" content="Encontre o imóvel perfeito. Venda, aluguel e financiamento com a maior imobiliária da região.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imobiliariaprime.com.br/">
+    <meta property="og:title" content="Imobiliária Prime - Venda e Aluguel de Imóveis">
+    <meta property="og:description" content="Encontre o imóvel perfeito. Venda, aluguel e financiamento.">
+    <meta property="og:image" content="https://imobiliariaprime.com.br/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://imobiliariaprime.com.br/">
+    <meta property="twitter:title" content="Imobiliária Prime">
+    <meta property="twitter:description" content="Encontre o imóvel perfeito.">
+    <meta property="twitter:image" content="https://imobiliariaprime.com.br/assets/images/og-image.jpg">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Imobiliária Prime",
+        "description": "Imobiliária especializada em venda e aluguel de imóveis",
+        "url": "https://imobiliariaprime.com.br",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        }
+    }
+    </script>
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <span>Imobiliária Prime</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Início</a>
+                <a href="#properties">Imóveis</a>
+                <a href="#about">Sobre</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <a href="#contact" class="btn btn-primary">Anuncie Seu Imóvel</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Encontre seu <span class="highlight">lar dos sonhos</span></h1>
+            <p>Mais de 1000 imóveis disponíveis para venda e aluguel</p>
+            
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="tab active" data-tab="sale">Comprar</button>
+                    <button class="tab" data-tab="rent">Alugar</button>
+                </div>
+                <div class="search-form">
+                    <div class="search-field">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Cidade, bairro ou região">
+                    </div>
+                    <div class="search-field">
+                        <i class="fas fa-home"></i>
+                        <select>
+                            <option>Tipo de imóvel</option>
+                            <option>Casa</option>
+                            <option>Apartamento</option>
+                            <option>Terreno</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <i class="fas fa-dollar-sign"></i>
+                        <input type="text" placeholder="Valor máximo">
+                    </div>
+                    <button class="btn btn-primary btn-large">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="properties-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Imóveis em Destaque</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+            
+            <div class="filters">
+                <select>
+                    <option>Ordenar por</option>
+                    <option>Menor Preço</option>
+                    <option>Maior Preço</option>
+                    <option>Mais Recente</option>
+                </select>
+                <button class="filter-toggle"><i class="fas fa-filter"></i> Filtros</button>
+            </div>
+            
+            <div class="properties-grid" id="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Casa" loading="lazy">
+                        <span class="property-badge">Venda</span>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">R$ 850.000</div>
+                        <h3>Casa 3 Quartos - Jardim Paulista</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, SP</span>
+                        </div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3</span>
+                            <span><i class="fas fa-bath"></i> 2</span>
+                            <span><i class="fas fa-car"></i> 2</span>
+                            <span><i class="fas fa-ruler"></i> 180m²</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Detalhes</button>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Apartamento" loading="lazy">
+                        <span class="property-badge rent">Aluguel</span>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">R$ 2.500/mês</div>
+                        <h3>Apartamento 2 Quartos - Centro</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, SP</span>
+                        </div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2</span>
+                            <span><i class="fas fa-bath"></i> 1</span>
+                            <span><i class="fas fa-car"></i> 1</span>
+                            <span><i class="fas fa-ruler"></i> 65m²</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Detalhes</button>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Casa" loading="lazy">
+                        <span class="property-badge">Venda</span>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-info">
+                        <div class="property-price">R$ 1.200.000</div>
+                        <h3>Casa 4 Quartos com Piscina</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, SP</span>
+                        </div>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4</span>
+                            <span><i class="fas fa-bath"></i> 3</span>
+                            <span><i class="fas fa-car"></i> 3</span>
+                            <span><i class="fas fa-ruler"></i> 350m²</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section" style="background: #f5f5f5; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">O que nossos clientes dizem</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Depoimentos de quem confiou na Prime</p>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Encontrei o apartamento dos meus sonhos através da Imobiliária Prime. O atendimento foi excelente e todo o processo de compra foi transparente e ágil!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Ana" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Ana Paula</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Compradora</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Vendi minha casa em menos de 2 meses! A equipe da Prime foi muito profissional e me orientou em todo o processo. Recomendo!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Carlos Oliveira</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Vendedor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Aluguei um apartamento pelo site e foi tudo muito simples. A busca é fácil e os corretores são bem atenciosos. Ótima experiência!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Maria" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Maria Silva</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Locatária</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Perguntas Frequentes</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Tire suas dúvidas sobre compra, venda e aluguel</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Quais documentos são necessários para alugar?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Para alugar, você precisa de: RG, CPF, comprovante de renda dos últimos 3 meses, comprovante de residência e fiador ou seguro fiança. Nossa equipe auxilia em todo o processo.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Como funciona a avaliação de imóvel para venda?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Fazemos uma análise completa considerando localização, estado do imóvel, mercado atual e comparação com imóveis similares na região. A avaliação é gratuita e sem compromisso.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Vocês ajudam com financiamento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Oferecemos assessoria completa para financiamento imobiliário, incluindo análise de perfil, simulação de parcelas e indicação das melhores opções de crédito para você.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>É possível agendar visitas online?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Você pode agendar visitas diretamente pelo site ou entrar em contato conosco. Também oferecemos tours virtuais 360° para imóveis selecionados.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-home"></i>
+                        <span>Imobiliária Prime</span>
+                    </div>
+                    <p>Sua melhor escolha para encontrar o lar dos sonhos</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#properties">Imóveis</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@prime.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    const isOpen = answer.style.display === 'block';
+                    
+                    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                    document.querySelectorAll('.faq-question i').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

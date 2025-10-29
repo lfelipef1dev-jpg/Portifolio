@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduOnline - Plataforma de Ensino Online | Cursos e Certificados</title>
+    <meta name="description" content="Plataforma educacional completa com cursos online, certificados válidos e área do aluno interativa.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduonline.com.br/">
+    <meta property="og:title" content="EduOnline - Plataforma de Ensino Online">
+    <meta property="og:description" content="Plataforma educacional completa com cursos online, certificados válidos e área do aluno interativa.">
+    <meta property="og:image" content="https://eduonline.com.br/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eduonline.com.br/">
+    <meta property="twitter:title" content="EduOnline - Plataforma de Ensino Online">
+    <meta property="twitter:description" content="Plataforma educacional completa com cursos online e certificados.">
+    <meta property="twitter:image" content="https://eduonline.com.br/assets/images/og-image.jpg">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "EduOnline",
+        "description": "Plataforma educacional completa com cursos online",
+        "url": "https://eduonline.com.br",
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "BRL",
+            "price": "299.90"
+        }
+    }
+    </script>
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduOnline</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Início</a>
+                <a href="#courses">Cursos</a>
+                <a href="#features">Funcionalidades</a>
+                <a href="#testimonials">Depoimentos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#login" class="btn btn-outline">Entrar</a>
+                <a href="#register" class="btn btn-primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Aprenda online de forma <span class="highlight">eficaz</span></h1>
+                <p>Plataforma completa com cursos, certificados e acompanhamento de progresso</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary btn-large">Ver Cursos</a>
+                    <a href="#features" class="btn btn-outline btn-large">Saiba Mais</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Cursos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Alunos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Instrutores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <h2 class="section-title">Cursos Disponíveis</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Curso" loading="lazy">
+                        <span class="course-badge">Popular</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Desenvolvimento Web Completo</h3>
+                        <p class="course-instructor">Por: João Silva</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 (1.234 avaliações)</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 40h</span>
+                            <span><i class="fas fa-certificate"></i> Certificado</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">R$ 299,90</span>
+                            <span class="old-price">R$ 499,90</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Curso</button>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/590571/pexels-photo-590571.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Curso" loading="lazy">
+                    </div>
+                    <div class="course-content">
+                        <h3>Marketing Digital Avançado</h3>
+                        <p class="course-instructor">Por: Maria Santos</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (856 avaliações)</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 30h</span>
+                            <span><i class="fas fa-certificate"></i> Certificado</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">R$ 249,90</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Curso</button>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Curso" loading="lazy">
+                        <span class="course-badge">Novo</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Design UX/UI Moderno</h3>
+                        <p class="course-instructor">Por: Ana Costa</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7 (642 avaliações)</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 35h</span>
+                            <span><i class="fas fa-certificate"></i> Certificado</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">R$ 279,90</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Curso</button>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Curso" loading="lazy">
+                    </div>
+                    <div class="course-content">
+                        <h3>Programação Python</h3>
+                        <p class="course-instructor">Por: Carlos Mendes</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 (1.089 avaliações)</span>
+                        </div>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 50h</span>
+                            <span><i class="fas fa-certificate"></i> Certificado</span>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">R$ 329,90</span>
+                        </div>
+                        <button class="btn btn-primary btn-block">Ver Curso</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a EduOnline?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Acesso 24/7</h3>
+                    <p>Estude quando e onde quiser, no seu próprio ritmo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificados Válidos</h3>
+                    <p>Receba certificados reconhecidos pelo mercado</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Acompanhamento</h3>
+                    <p>Monitore seu progresso com relatórios detalhados</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Comunidade</h3>
+                    <p>Interaja com outros alunos e instrutores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section" style="background: #f5f5f5; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">O que nossos alunos dizem</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Depoimentos reais de quem já estudou conosco</p>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Consegui meu primeiro emprego como desenvolvedor após completar o curso de Desenvolvimento Web. O conteúdo é excelente e os instrutores muito didáticos!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Carlos Mendes</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Aluno - Desenvolvimento Web</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "A plataforma é muito intuitiva e os cursos têm material completo. Os certificados são reconhecidos e já usei em várias entrevistas de emprego. Recomendo!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Patricia" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Patricia Alves</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Aluna - Marketing Digital</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <div style="color: #FFD700; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Estudo no meu ritmo e posso revisar o conteúdo quantas vezes quiser. A área do aluno é completa e o suporte responde rápido. Excelente plataforma!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Roberto" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1rem;">Roberto Silva</h4>
+                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Aluno - 5 cursos completos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Perguntas Frequentes</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">Tire suas dúvidas sobre nossos cursos</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Os certificados são válidos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Todos os nossos certificados são emitidos pela plataforma e podem ser validados online. Eles podem ser usados para comprovar conhecimentos em processos seletivos e para seu currículo profissional.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Como funciona o acesso aos cursos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Após a compra, você recebe acesso imediato e ilimitado. Os cursos ficam disponíveis na sua área do aluno e você pode assistir quantas vezes quiser, quando e onde quiser. O acesso não expira!
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Preciso ter conhecimento prévio?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Não! Oferecemos cursos tanto para iniciantes quanto para nível avançado. Cada curso indica claramente o nível necessário e pré-requisitos (se houver). A maioria dos cursos começa do zero.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Tem suporte ao aluno?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Oferecemos suporte completo via chat, email e fórum de discussão. Nossos instrutores respondem dúvidas e nossa equipe está disponível para ajudar em qualquer questão técnica ou relacionada ao conteúdo.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="margin-bottom: 1rem; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; border: none; background: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 600;">
+                        <span>Os cursos são atualizados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none; line-height: 1.6; color: #666;">
+                        Sim! Atualizamos regularmente os cursos com novos conteúdos e tecnologias. Quando você compra um curso, tem direito a todas as atualizações futuras sem custo adicional.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    const isOpen = answer.style.display === 'block';
+                    
+                    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                    document.querySelectorAll('.faq-question i').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    if (!isOpen) {
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+⚠️ IMPORTANTE: Execute estes comandos DEPOIS de instalar o Git!
+
+1. Abra PowerShell na pasta do projeto:
+   cd C:\Users\lfeli\Desktop\Portifolio
+
+2. Configure o Git (substitua pelos seus dados):
+   git config --global user.name "Luiz Felipe"
+   git config --global user.email "lfelipef1.dev@gmail.com"
+
+3. Inicialize o repositório:
+   git init
+
+4. Adicione todos os arquivos:
+   git add .
+
+5. Faça o primeiro commit:
+   git commit -m "Primeiro commit - Portfólio inicial"
+
+6. Depois você precisa criar o repositório no GitHub e fazer o push.
+   Veja o arquivo GUIA_DEPLOY.md para os próximos passos!
+

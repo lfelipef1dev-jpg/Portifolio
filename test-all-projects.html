@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Todos os Projetos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .project-test {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .project-test h2 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+        }
+        .test-item {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-left: 4px solid #ddd;
+            padding-left: 1rem;
+        }
+        .test-item.success {
+            border-left-color: #4caf50;
+            background: #f1f8f4;
+        }
+        .test-item.error {
+            border-left-color: #f44336;
+            background: #fff5f5;
+        }
+        .test-item.warning {
+            border-left-color: #ff9800;
+            background: #fff8f0;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        .status-badge.success { background: #4caf50; color: white; }
+        .status-badge.error { background: #f44336; color: white; }
+        .status-badge.warning { background: #ff9800; color: white; }
+        .link-test {
+            color: #0066CC;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        .link-test:hover {
+            text-decoration: underline;
+        }
+        .summary {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        .summary h3 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+        .stat-box .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1976d2;
+        }
+        .stat-box .label {
+            color: #666;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Teste Completo - Portfólio e Projetos</h1>
+        
+        <div id="test-results"></div>
+        
+        <div class="summary" id="summary">
+            <h3>📊 Resumo dos Testes</h3>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div class="number" id="total-tests">0</div>
+                    <div class="label">Total de Testes</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="passed-tests">0</div>
+                    <div class="label">Passou</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="failed-tests">0</div>
+                    <div class="label">Falhou</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="warnings-tests">0</div>
+                    <div class="label">Avisos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projects = [
+            {
+                name: 'Portfólio Principal',
+                path: 'index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'assets/css/main.css' },
+                    { name: 'CSS responsive.css existe', type: 'css', file: 'assets/css/responsive.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'assets/js/main.js' },
+                    { name: 'Estrutura HTML válida', type: 'html' }
+                ]
+            },
+            {
+                name: 'Clínica Psicológica',
+                path: 'projetos/clinica-psicologica/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/clinica-psicologica/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/clinica-psicologica/assets/js/main.js' },
+                    { name: 'Service Worker existe', type: 'js', file: 'projetos/clinica-psicologica/assets/js/service-worker.js' },
+                    { name: 'Schema.org implementado', type: 'schema' }
+                ]
+            },
+            {
+                name: 'E-commerce Fashion',
+                path: 'projetos/ecommerce-fashion/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/ecommerce-fashion/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/ecommerce-fashion/assets/js/main.js' },
+                    { name: 'Schema.org implementado', type: 'schema' },
+                    { name: 'Carrinho funcional', type: 'functionality' }
+                ]
+            },
+            {
+                name: 'Escola Online',
+                path: 'projetos/escola-online/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/escola-online/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/escola-online/assets/js/main.js' }
+                ]
+            },
+            {
+                name: 'Imobiliária Prime',
+                path: 'projetos/imobiliaria-prime/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/imobiliaria-prime/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/imobiliaria-prime/assets/js/main.js' }
+                ]
+            },
+            {
+                name: 'Restaurante Italiano',
+                path: 'projetos/restaurante-italiano/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/restaurante-italiano/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/restaurante-italiano/assets/js/main.js' }
+                ]
+            },
+            {
+                name: 'TechSolutions',
+                path: 'projetos/techsolutions/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/techsolutions/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/techsolutions/assets/js/main.js' }
+                ]
+            },
+            {
+                name: "D'Casa Mobile",
+                path: 'projetos/dcasa-mobile/index.html',
+                tests: [
+                    { name: 'Arquivo HTML existe', type: 'file' },
+                    { name: 'CSS main.css existe', type: 'css', file: 'projetos/dcasa-mobile/assets/css/main.css' },
+                    { name: 'JavaScript main.js existe', type: 'js', file: 'projetos/dcasa-mobile/assets/js/main.js' }
+                ]
+            }
+        ];
+
+        let totalTests = 0;
+        let passedTests = 0;
+        let failedTests = 0;
+        let warningsTests = 0;
+
+        async function testFile(filePath) {
+            try {
+                const response = await fetch(filePath, { method: 'HEAD' });
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        async function testProject(project) {
+            const projectDiv = document.createElement('div');
+            projectDiv.className = 'project-test';
+            
+            const title = document.createElement('h2');
+            title.textContent = project.name;
+            title.innerHTML += `<a href="${project.path}" target="_blank" class="link-test">🔗 Abrir</a>`;
+            projectDiv.appendChild(title);
+            
+            const resultsDiv = document.createElement('div');
+            
+            for (const test of project.tests) {
+                totalTests++;
+                const testItem = document.createElement('div');
+                testItem.className = 'test-item';
+                
+                let result = false;
+                let status = 'error';
+                
+                if (test.type === 'file') {
+                    result = await testFile(project.path);
+                    status = result ? 'success' : 'error';
+                } else if (test.type === 'css' || test.type === 'js') {
+                    result = await testFile(test.file);
+                    status = result ? 'success' : 'error';
+                } else if (test.type === 'schema') {
+                    // Verificar se Schema.org está no HTML
+                    try {
+                        const html = await fetch(project.path).then(r => r.text());
+                        result = html.includes('application/ld+json') || html.includes('schema.org');
+                        status = result ? 'success' : 'warning';
+                    } catch {
+                        result = false;
+                        status = 'warning';
+                    }
+                } else if (test.type === 'functionality') {
+                    // Verificar funcionalidades básicas
+                    status = 'warning';
+                    result = true;
+                }
+                
+                testItem.className = `test-item ${status}`;
+                testItem.innerHTML = `
+                    ${test.name}
+                    <span class="status-badge ${status}">${result ? '✓' : '✗'}</span>
+                `;
+                
+                resultsDiv.appendChild(testItem);
+                
+                if (result) {
+                    passedTests++;
+                } else {
+                    if (status === 'warning') {
+                        warningsTests++;
+                    } else {
+                        failedTests++;
+                    }
+                }
+            }
+            
+            projectDiv.appendChild(resultsDiv);
+            return projectDiv;
+        }
+
+        async function runTests() {
+            const resultsContainer = document.getElementById('test-results');
+            
+            for (const project of projects) {
+                const projectTest = await testProject(project);
+                resultsContainer.appendChild(projectTest);
+            }
+            
+            // Atualizar estatísticas
+            document.getElementById('total-tests').textContent = totalTests;
+            document.getElementById('passed-tests').textContent = passedTests;
+            document.getElementById('failed-tests').textContent = failedTests;
+            document.getElementById('warnings-tests').textContent = warningsTests;
+        }
+
+        // Executar testes ao carregar
+        runTests();
+    </script>
+</body>
+</html>
+

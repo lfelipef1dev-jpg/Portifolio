@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizador Rápido - Felipe Web Solutions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+        }
+        .section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: bold;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            border-color: #0066CC;
+        }
+        button {
+            background: #0066CC;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            width: 100%;
+        }
+        button:hover {
+            background: #0052a3;
+        }
+        .result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+            display: none;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Atualizador Rápido de Configurações</h1>
+        <p>Preencha os campos abaixo e receba as instruções exatas para atualizar seu <code>index.html</code>.</p>
+
+        <div class="section">
+            <h2>1️⃣ Formspree</h2>
+            <div class="instructions">
+                💡 Você precisa ter um ID do Formspree primeiro.
+                <br>Crie em: <a href="https://formspree.io" target="_blank">formspree.io</a>
+            </div>
+            <label>ID do Formulário Formspree:</label>
+            <input type="text" id="formspree-id" placeholder="Ex: xrgklqwe">
+            <button onclick="gerarFormspree()">Gerar Instruções Formspree</button>
+            <div class="result" id="formspree-result"></div>
+        </div>
+
+        <div class="section">
+            <h2>2️⃣ Google Analytics</h2>
+            <div class="instructions">
+                💡 Você precisa ter um ID de medição GA4 primeiro.
+                <br>Crie em: <a href="https://analytics.google.com" target="_blank">analytics.google.com</a>
+            </div>
+            <label>ID de Medição GA4:</label>
+            <input type="text" id="ga-id" placeholder="Ex: G-1234567890">
+            <button onclick="gerarGA()">Gerar Instruções Google Analytics</button>
+            <div class="result" id="ga-result"></div>
+        </div>
+
+        <div class="section">
+            <h2>3️⃣ GitHub</h2>
+            <div class="instructions">
+                💡 Digite seu usuário GitHub (sem @)
+            </div>
+            <label>Seu Usuário GitHub:</label>
+            <input type="text" id="github-user" placeholder="Ex: luizfelipe">
+            <button onclick="gerarGitHub()">Gerar Instruções GitHub</button>
+            <div class="result" id="github-result"></div>
+        </div>
+    </div>
+
+    <script>
+        function gerarFormspree() {
+            const id = document.getElementById('formspree-id').value.trim();
+            if (!id) {
+                alert('Por favor, digite o ID do Formspree');
+                return;
+            }
+
+            const result = document.getElementById('formspree-result');
+            result.innerHTML = `
+                <h3>✅ Instruções para Formspree:</h3>
+                <ol>
+                    <li>Abra o arquivo <code>index.html</code></li>
+                    <li>Encontre a linha <strong>1073</strong> (procure por: "seu-form-id-aqui")</li>
+                    <li>Substitua:</li>
+                </ol>
+                <code>action="https://formspree.io/f/seu-form-id-aqui"</code>
+                <p>Por:</p>
+                <code>action="https://formspree.io/f/${id}"</code>
+            `;
+            result.style.display = 'block';
+        }
+
+        function gerarGA() {
+            const id = document.getElementById('ga-id').value.trim();
+            if (!id) {
+                alert('Por favor, digite o ID do Google Analytics');
+                return;
+            }
+
+            // Validar formato
+            if (!id.startsWith('G-')) {
+                alert('O ID do GA4 deve começar com "G-" (ex: G-1234567890)');
+                return;
+            }
+
+            const result = document.getElementById('ga-result');
+            result.innerHTML = `
+                <h3>✅ Instruções para Google Analytics:</h3>
+                <ol>
+                    <li>Abra o arquivo <code>index.html</code></li>
+                    <li><strong>Linha 1192:</strong> Substitua:</li>
+                </ol>
+                <code>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"&gt;</code>
+                <p>Por:</p>
+                <code>&lt;script async src="https://www.googletagmanager.com/gtag/js?id=${id}"&gt;</code>
+                <ol start="3">
+                    <li><strong>Linha 1197:</strong> Substitua:</li>
+                </ol>
+                <code>gtag('config', 'GA_MEASUREMENT_ID', {</code>
+                <p>Por:</p>
+                <code>gtag('config', '${id}', {</code>
+            `;
+            result.style.display = 'block';
+        }
+
+        function gerarGitHub() {
+            const user = document.getElementById('github-user').value.trim();
+            if (!user) {
+                alert('Por favor, digite seu usuário GitHub');
+                return;
+            }
+
+            const result = document.getElementById('github-result');
+            result.innerHTML = `
+                <h3>✅ Instruções para GitHub:</h3>
+                <ol>
+                    <li>Abra o arquivo <code>index.html</code></li>
+                    <li>Substitua <code>seu-usuario</code> por <code>${user}</code> nas seguintes linhas:</li>
+                </ol>
+                <ul>
+                    <li><strong>Linha 603:</strong> clinica-psicologica</li>
+                    <li><strong>Linha 631:</strong> ecommerce-fashion</li>
+                    <li><strong>Linha 659:</strong> escola-online</li>
+                    <li><strong>Linha 687:</strong> imobiliaria-prime</li>
+                    <li><strong>Linha 715:</strong> restaurante-italiano</li>
+                    <li><strong>Linha 743:</strong> techsolutions</li>
+                    <li><strong>Linha 771:</strong> dcasa-mobile</li>
+                </ul>
+                <p><strong>Exemplo:</strong></p>
+                <code>href="https://github.com/seu-usuario/clinica-psicologica"</code>
+                <p>Por:</p>
+                <code>href="https://github.com/${user}/clinica-psicologica"</code>
+                <p style="margin-top: 1rem;"><strong>💡 Dica:</strong> Use Ctrl+F para buscar "seu-usuario" e substituir tudo de uma vez!</p>
+            `;
+            result.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+

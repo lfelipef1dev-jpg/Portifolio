@@ -1,0 +1,14 @@
+# robots.txt - Felipe Web Solutions
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://felipewebsolutions.dev/sitemap.xml
+
+# Bloquear arquivos desnecessários
+Disallow: /assets/js/project-modals.js
+Disallow: /*.md$
+Disallow: /test-*.html
+
+
